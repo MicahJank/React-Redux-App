@@ -1,5 +1,6 @@
 import React from 'react';
 import TopBar from './components/TopBar.js';
+import MovieList from './components/MovieList.js';
 
 import { makeStyles } from '@material-ui/core';
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className={classes.mainApp}>
       <TopBar />
+      <MovieList />
     </div>
   );
 }
