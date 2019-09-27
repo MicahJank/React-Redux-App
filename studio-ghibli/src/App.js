@@ -1,9 +1,20 @@
 import React from 'react';
 import TopBar from './components/TopBar.js';
 
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  mainApp: {
+    backgroundColor: '',
+  }
+})
+
 function App() {
+
+  const classes = useStyles();
+
   return (
-    <div className="App">
+    <div className={classes.mainApp}>
       <TopBar />
     </div>
   );

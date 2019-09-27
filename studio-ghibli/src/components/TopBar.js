@@ -8,10 +8,12 @@ import SearchIcon from '@material-ui/icons/Search'
 
 const useStyles = makeStyles(theme => ({
     root: {
-      flexGrow: 1,
+      height: 100,
     },
     menuButton: {
       marginRight: theme.spacing(2),
+      height: 52,
+      padding: 20,
     },
     title: {
       flexGrow: 1,
@@ -19,8 +21,10 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },
+      height: 31,
     },
     search: {
+      height: '40%',
       position: 'relative',
       borderRadius: theme.shape.borderRadius,
       backgroundColor: fade(theme.palette.common.white, 0.15),
@@ -66,7 +70,7 @@ const TopBar = () => {
     return(
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar >
           <IconButton
             edge="start"
             className={classes.menuButton}
