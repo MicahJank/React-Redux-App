@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import Movie from './Movie.js';
+import { images } from '../images/images.js';
 import { fetchMovies } from '../actions';
 
 import { connect } from 'react-redux';
@@ -17,8 +18,8 @@ const MovieList = ({ movieList, fetchMovies }) => {
     // console.log(movieList);
     return (
         <Box display='flex' justifyContent='center' flexWrap='wrap'>
-            {movieList.map(movie => {
-                return <Movie key={movie.id} movie={movie} />
+            {movieList.map((movie, i) => {
+                return <Movie key={movie.id} image={images[i]} movie={movie} />
             })}
         </Box>
     );
