@@ -8,6 +8,7 @@ const useStyles = makeStyles({
   mainApp: {
     backgroundColor: '',
   }
+  
 })
 
 function App() {

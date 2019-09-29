@@ -1,18 +1,20 @@
 import React from 'react';
 
 import { Box, AppBar, Toolbar, IconButton, Typography, InputBase } from '@material-ui/core';
+import Image from 'material-ui-image';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon  from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search'
+import SearchIcon from '@material-ui/icons/Search';
+
+import totoroImg from '../images/tortoro.png';
 
 
 const useStyles = makeStyles(theme => ({
     root: {
-      height: 100,
+      height: 250,
     },
     menuButton: {
       marginRight: theme.spacing(2),
-      height: 52,
       padding: 20,
     },
     title: {
@@ -21,7 +23,6 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },
-      height: 31,
     },
     search: {
       height: '40%',
@@ -61,6 +62,18 @@ const useStyles = makeStyles(theme => ({
         },
       },
     },
+    appbar: {
+      height: 150,
+      position: 'relative',
+      overflow: 'hidden'
+    },
+    totoro: {
+      width: '307px',
+      position: 'absolute',
+      right: '23%',
+      top: -45,
+      zIndex: 0
+    }
   }));
 
 const TopBar = () => {
@@ -69,7 +82,7 @@ const TopBar = () => {
 
     return(
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.appbar} position="static">
         <Toolbar >
           <IconButton
             edge="start"
@@ -96,6 +109,7 @@ const TopBar = () => {
             />
           </div>
         </Toolbar>
+        <img className={classes.totoro} src={totoroImg} />
       </AppBar>
     </div>
     );
